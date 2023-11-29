@@ -24,5 +24,10 @@ title_tag = soup.title
 print(title_tag)
 # 클래스가 "content"인 div 태그 검색
 div_tags = soup.select('div.content')
-for div in div_tags :
-    print(div)
+# for div in div_tags :
+#     print(div.text)
+
+# href 속성이 있는 모든 a 태그 검색
+a_tags = soup.find_all('a', href=True)
+for a_tag in a_tags:
+    print(a_tag)
